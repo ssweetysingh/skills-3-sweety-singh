@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<body class = topmelon>
+
+  <!-- Create a div for every Most Loved Melon using a Jinja for-loop -->
+<h1>Welcome, {{username}}</h1>
+ {% for melon in melons.values()%}
+<div class="melon-div">
+    <h3>{{username}} this is a {{melon.name}}</h3>
+    <h2>Number of Loves: {{melon.num_loves}}</h2>
+    <img src="{{melon.img}}">
+</div>
+    {% endfor %}
+  
+</body>
+{% endblock %}
+
+
